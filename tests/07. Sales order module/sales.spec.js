@@ -61,7 +61,7 @@ await page.locator('//input[@type="submit"]').nth(1).click()
 
 //pom
 
-test.only("salespage1",async ({page}) => {
+test("salespage1",async ({page}) => {
     const sign=new loginpage(page)
     await sign.launching(login.url)
     await sign.details(login.user_name, login.password)

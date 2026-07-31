@@ -62,7 +62,7 @@ await page.getByRole('img',{name:"Create Lead..."}).click()
 
 //pom
 
-test.only("create_lead", async ({page}) => {
+test("create_lead", async ({page}) => {
    let sign=new loginpage(page)
     await sign.launching(login.url)
     await sign.details(login.user_name, login.password)

@@ -23,7 +23,7 @@ await signin.login_button.click()
 
 //simplify
 
-test.only("loggin second time",async ({page}) => {
+test("loggin second time",async ({page}) => {
     let sign=new loginpage(page)
     await sign.launching(login.url)
     await sign.details(login.user_name, login.password)

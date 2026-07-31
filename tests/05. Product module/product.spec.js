@@ -32,7 +32,7 @@ if(product_name===prod){
 
 //pom
 
-test.only("prodcreate1",async ({page}) => {
+test("prodcreate1",async ({page}) => {
     let signin=new loginpage(page)
     await signin.launching(login.url)
     await signin.details(login.user_name, login.password)

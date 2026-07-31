@@ -68,7 +68,7 @@ if (accountname===org1?.trim()){
 
 //pom
 
-test.only("organ pom", async ({page}) => {
+test("organ pom", async ({page}) => {
     let sign=new loginpage(page)
     await sign.launching(login.url)
     await sign.details(login.user_name, login.password)
