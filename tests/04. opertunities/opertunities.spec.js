@@ -51,7 +51,7 @@ await page.getByRole('button',{name:"Save "}).first().click()
 
 //pom
 
-test.only("creating opertunity2",async ({page}) => {
+test("creating opertunity2",async ({page}) => {
     let signin=new loginpage(page)
     await signin.launching(login.url)
     await signin.details(login.user_name,login.password)

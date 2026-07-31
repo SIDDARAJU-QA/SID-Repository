@@ -88,7 +88,7 @@ test("creat_contact", async ({page}) => {
 
 //after utils code looks like
 
-test.only("contact using utils", async ({page}) => {
+test("contact using utils", async ({page}) => {
     let sign=new loginpage(page)
     await sign.launching(login.url)
     await sign.details(login.user_name, login.password)
