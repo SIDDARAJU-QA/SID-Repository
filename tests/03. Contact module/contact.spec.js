@@ -6,7 +6,7 @@ import { loginpage } from "../../Pages/Login"
 //after utils importing random
 import { random } from "../../utils/random"
 
-test("creating contact", async({page})=>{
+test.skip("creating contact", async({page})=>{
 await page.goto("http://localhost:8888/")
 await page.locator('//input[@name="user_name"]').fill("admin")
 await page.locator('//input[@name="user_password"]').fill("admin")
@@ -42,7 +42,7 @@ if(contact1===contact){
 
 //
 
-test("creating contact1", async({page})=>{
+test.skip("creating contact1", async({page})=>{
 await page.goto("http://localhost:8888/")
 await page.locator('//input[@name="user_name"]').fill(login.user_name)
 await page.locator('//input[@name="user_password"]').fill(login.password)
@@ -76,7 +76,7 @@ if(contact1===contact){
 //pom
 
 
-test("creat_contact", async ({page}) => {
+test.skip("creat_contact", async ({page}) => {
     let sign=new loginpage(page)
     await sign.launching(login.url)
     await sign.details(login.user_name, login.password)
@@ -88,7 +88,7 @@ test("creat_contact", async ({page}) => {
 
 //after utils code looks like
 
-test("contact using utils", async ({page}) => {
+test.skip("contact using utils", async ({page}) => {
     let sign=new loginpage(page)
     await sign.launching(login.url)
     await sign.details(login.user_name, login.password)

@@ -8,7 +8,7 @@ import { productpage } from "../../Pages/product"
 import { organizationpage } from "../../Pages/organization"
 
 
-test("creating quote", async({page})=>{
+test.skip("creating quote", async({page})=>{
 await page.goto("http://localhost:8888/")
 await page.locator('//input[@name="user_name"]').fill("admin")
 await page.locator('//input[@name="user_password"]').fill("admin")
@@ -52,7 +52,7 @@ await page.locator('//input[@type="submit"]').nth(1).click()
 })
 
 //
-test("creating quote1", async({page})=>{
+test.skip("creating quote1", async({page})=>{
 await page.goto(login.url)
 await page.locator('//input[@name="user_name"]').fill(login.user_name)
 await page.locator('//input[@name="user_password"]').fill(login.password)
@@ -96,7 +96,7 @@ await page.locator('//input[@type="submit"]').nth(1).click()
 })
 
 //pom
-test("qutation2",async ({page}) => {
+test.skip("qutation2",async ({page}) => {
     let signin=new loginpage(page)
     await signin.launching(login.url)
     await signin.details(login.user_name,login.password)

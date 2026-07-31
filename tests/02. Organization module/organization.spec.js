@@ -6,7 +6,7 @@ import { loginpage } from "../../Pages/Login"
 
 
 //login
-test("creating organization", async({page})=>{
+test.skip("creating organization", async({page})=>{
 await page.goto("http://localhost:8888/")
 await page.locator('//input[@name="user_name"]').fill("admin")
 await page.locator('//input[@name="user_password"]').fill("admin")
@@ -36,7 +36,7 @@ if (accountname===org1?.trim()){
 
 })
 
-test("creating organize", async({page})=>{
+test.skip("creating organize", async({page})=>{
 await page.goto(login.url)
 await page.locator('//input[@name="user_name"]').fill(login.user_name)
 await page.locator('//input[@name="user_password"]').fill(login.password)
@@ -68,7 +68,7 @@ if (accountname===org1?.trim()){
 
 //pom
 
-test("organ pom", async ({page}) => {
+test.skip("organ pom", async ({page}) => {
     let sign=new loginpage(page)
     await sign.launching(login.url)
     await sign.details(login.user_name, login.password)

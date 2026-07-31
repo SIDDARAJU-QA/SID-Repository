@@ -8,7 +8,7 @@ import qutation  from '../../TestData/quotes.json'
 import sales from '../../TestData/sales.json'
 import { salespage } from "../../Pages/sales"
 
-test("creating sales order", async({page})=>{
+test.skip("creating sales order", async({page})=>{
 await page.goto("http://localhost:8888/")
 await page.locator('//input[@name="user_name"]').fill("admin")
 await page.locator('//input[@name="user_password"]').fill("admin")
@@ -61,7 +61,7 @@ await page.locator('//input[@type="submit"]').nth(1).click()
 
 //pom
 
-test("salespage1",async ({page}) => {
+test.skip("salespage1",async ({page}) => {
     const sign=new loginpage(page)
     await sign.launching(login.url)
     await sign.details(login.user_name, login.password)

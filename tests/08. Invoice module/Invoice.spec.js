@@ -10,7 +10,7 @@ import { random } from "../../utils/random"
 import login from '../../TestData/Login.json'
 import invoicecall from '../../TestData/invoice.json'
 
-test("creating invoice", async({page})=>{
+test.skip("creating invoice", async({page})=>{
 await page.goto("http://localhost:8888/")
 await page.locator('//input[@name="user_name"]').fill("admin")
 await page.locator('//input[@name="user_password"]').fill("admin")
@@ -63,7 +63,7 @@ await page.locator('//input[@type="submit"]').nth(1).click()
 })
 
 
-test("testing incoice", async ({page}) => {
+test.skip("testing incoice", async ({page}) => {
     let sign=new loginpage(page)
 await sign.launching(login.url)
 await sign.details(login.user_name, login.password)

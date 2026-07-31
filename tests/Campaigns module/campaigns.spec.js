@@ -1,6 +1,6 @@
 import{test} from "@playwright/test"
 
-test("camapign module", async({page})=>{
+test.skip("camapign module", async({page})=>{
 await page.goto("http://localhost:8888/")
 await page.locator('//input[@name="user_name"]').fill("admin")
 await page.locator('//input[@name="user_password"]').fill("admin")

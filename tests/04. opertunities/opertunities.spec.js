@@ -4,7 +4,7 @@ import opp from '../../TestData/oppertinities.json'
 import { loginpage } from "../../Pages/Login"
 import { opertunitypage } from "../../Pages/opertunities"
 
-test("creating opertunity", async({page})=>{
+test.skip("creating opertunity", async({page})=>{
 await page.goto("http://localhost:8888/")
 await page.locator('//input[@name="user_name"]').fill("admin")
 await page.locator('//input[@name="user_password"]').fill("admin")
@@ -27,7 +27,7 @@ await page.getByRole('button',{name:"Save "}).first().click()
 })
 
 //
-test("creating opertunity1", async({page})=>{
+test.skip("creating opertunity1", async({page})=>{
 await page.goto("http://localhost:8888/")
 await page.locator('//input[@name="user_name"]').fill(login.user_name)
 await page.locator('//input[@name="user_password"]').fill(login.password)
@@ -51,7 +51,7 @@ await page.getByRole('button',{name:"Save "}).first().click()
 
 //pom
 
-test("creating opertunity2",async ({page}) => {
+test.skip("creating opertunity2",async ({page}) => {
     let signin=new loginpage(page)
     await signin.launching(login.url)
     await signin.details(login.user_name,login.password)

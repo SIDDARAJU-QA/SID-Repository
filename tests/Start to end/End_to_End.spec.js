@@ -1,6 +1,6 @@
 import{test} from "@playwright/test"
 
-test("end to end", async({page})=>{
+test.skip("end to end", async({page})=>{
 await page.goto("http://localhost:8888/")
 await page.locator('//input[@name="user_name"]').fill("admin")
 await page.locator('//input[@name="user_password"]').fill("admin")

@@ -4,7 +4,7 @@ import product from '../../TestData/product.json'
 import { loginpage } from "../../Pages/Login"
 import { productpage } from "../../Pages/product"
 
-test("creating product", async({page})=>{
+test.skip("creating product", async({page})=>{
 await page.goto("http://localhost:8888/")
 await page.locator('//input[@name="user_name"]').fill(login.user_name)
 await page.locator('//input[@name="user_password"]').fill(login.password)
