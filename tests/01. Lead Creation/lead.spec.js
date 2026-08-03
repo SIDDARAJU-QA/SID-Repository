@@ -6,7 +6,7 @@ import { loginpage } from "../../Pages/Login"
 import { url } from "node:inspector"
 import { random } from "../../utils/random"
 
-test.skip("creating product", async({page})=>{
+test("creating product", async({page})=>{
 await page.goto("http://localhost:8888/")
 await page.locator('//input[@name="user_name"]').fill("admin")
 await page.locator('//input[@name="user_password"]').fill("admin")
@@ -33,7 +33,7 @@ await page.getByRole('img',{name:"Create Lead..."}).click()
 }) 
 
 // 
-test.skip("creating lead", async({page})=>{
+test("creating lead", async({page})=>{
 await page.goto(login.url)
 await expect(page).toHaveURL(login.url)
 await page.locator('//input[@name="user_name"]').fill(login.user_name)
@@ -62,7 +62,7 @@ await page.getByRole('img',{name:"Create Lead..."}).click()
 
 //pom
 
-test("create_lead", async ({page}) => {
+test.only("create_lead", async ({page}) => {
    let sign=new loginpage(page)
     await sign.launching(login.url)
     await sign.details(login.user_name, login.password)

@@ -1,3 +1,5 @@
+import { expect } from "@playwright/test"
+
 export class loginpage{
     constructor(page){
         this.page=page
@@ -9,6 +11,8 @@ export class loginpage{
     //to simplify
     async launching(url){
         await this.page.goto(url)
+        await expect(this.page).toHaveURL(url)
+        
     }
 async details(username,password){
 await this.login_username.fill(username)

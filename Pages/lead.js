@@ -1,8 +1,5 @@
 import { dropdown } from "../utils/dropdown"
 
-
-
-
 export class leadpage{
     constructor(page){
         this.page=page
@@ -18,7 +15,10 @@ export class leadpage{
     async lead_details(firstname,lastname,company ){    //xyz makes positioning
         await this.leadlink.click()
         await this.createlead_button.click()
+        //Before utils
         //await this.Firstname_dropdown.selectOption({value:'Mr.'})
+        
+        // using utils
         await dropdown(this.Firstname_dropdown,{value:'Mr.'})
         await this.lead_firstname.fill(firstname)
         await this.lead_lastname.fill(lastname)

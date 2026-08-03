@@ -3,6 +3,7 @@ import login from '../../TestData/Login.json'
 import organize from '../../TestData/organ.json'
 import { organizationpage } from "../../Pages/organization"
 import { loginpage } from "../../Pages/Login"
+import { random } from "../../utils/random"
 
 
 //login
@@ -68,12 +69,17 @@ if (accountname===org1?.trim()){
 
 //pom
 
-test.skip("organ pom", async ({page}) => {
+test("organ pom", async ({page}) => {
     let sign=new loginpage(page)
     await sign.launching(login.url)
     await sign.details(login.user_name, login.password)
 
-    let organiz=new organizationpage(page)
-    await organiz.organ_details(organize.organization)
+    let organizationcreat=new organizationpage(page)
+    
+    let num=random()
+    let org1=organize.organization+num
+    await organizationcreat.organ_details(org1)
+
+    
     
 })
