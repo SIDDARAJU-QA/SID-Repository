@@ -16,7 +16,7 @@ pipeline {
 
         stage('Run Tests') {
             steps {
-                bat 'npx playwright test "tests/00.Login page/login1.spec.js"'
+                bat 'npx playwright test "tests/00.Login page/login1.spec.js" "tests/01.Lead Creation/leadfixture.spec.js" "tests/02. Organization module/organizedfixture.spec.js" "tests/03. Contact module/contact1.spec.js"'
             }
         }
     }
